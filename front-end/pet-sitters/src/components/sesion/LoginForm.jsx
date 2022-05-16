@@ -94,15 +94,14 @@ const LoginForm = ({ url, emailRegExp, passwordRegExp, validaCampo }) => {
                 Bienvenido de Vuelta!
             </Typography>
             <Box
+                className="form"
                 display="flex"
                 flexDirection="column"
                 component="form"
                 onSubmit={handleSubmit}
                 method="POST"
-                width="80%"
                 alignContent="center"
                 justifyContent="center"
-                m="auto"
             >
                 <TextField
                     error={errorEmail ? true : false}

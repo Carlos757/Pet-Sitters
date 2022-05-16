@@ -148,14 +148,13 @@ const RegisterForm = ({
                 Te damos la Bienvenida!
             </Typography>
             <Box
+                className="form"
                 display="flex"
                 flexDirection="column"
                 component="form"
                 onSubmit={handleSubmit}
-                width="80%"
                 alignContent="center"
                 justifyContent="center"
-                m="auto"
             >
                 <TextField
                     error={errorFirstName ? true : false}

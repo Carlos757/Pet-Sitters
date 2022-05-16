@@ -1,3 +1,37 @@
 body {
     background-color: #eeeeee;
 }
+
+.login {
+    width: 100%;
+}
+.cuidador-list {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+.cuidador-item {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    flex-direction: column;
+}
+.cuidador-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .form {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .cuidador-item {
+        width: 100%;
+        padding: 10px 0;
+        margin: 10px auto;
+        flex-direction: row;
+    }
+}

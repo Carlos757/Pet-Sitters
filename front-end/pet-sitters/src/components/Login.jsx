@@ -44,6 +44,7 @@ const Login = ({ url }) => {
                                 </TabList>
                             </Box>
 
+                            {/* Tab Login */}
                             <TabPanel value="1">
                                 <LoginForm
                                     url={url}
@@ -52,6 +53,8 @@ const Login = ({ url }) => {
                                     validaCampo={validaCampo}
                                 />
                             </TabPanel>
+
+                            {/* Tab Register */}
                             <TabPanel value="2">
                                 <RegisterForm
                                     url={url}
