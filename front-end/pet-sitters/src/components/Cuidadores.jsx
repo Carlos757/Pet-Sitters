@@ -11,6 +11,7 @@ import {
     Paper,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Cuidadores = ({ url }) => {
     const [cuidadores, setCuidadores] = useState([]);
@@ -33,6 +34,10 @@ const Cuidadores = ({ url }) => {
             console.log(error);
         }
     }
+
+    const handleCuidadorClick = (cuidador) => {
+        console.log(cuidador);
+    };
     return (
         <Paper className="cuidador-list">
             <Typography align="center" variant="h4" sx={{ p: 3 }}>
@@ -44,7 +49,14 @@ const Cuidadores = ({ url }) => {
             {cuidadores.length > 0 ? (
                 cuidadores.map((cuidador) => (
                     <List key={cuidador.id} sx={{}}>
-                        <ListItem className="cuidador-item" alignItems="center">
+                        <ListItem
+                            className="cuidador-item"
+                            alignItems="center"
+                            component={Link}
+                            to={"mostrar/" + cuidador.id}
+                            state={{ cuidador: cuidador }}
+                            onClick={() => handleCuidadorClick(cuidador)}
+                        >
                             <ListItemAvatar>
                                 <Avatar
                                     alt="avatar-cuidador"

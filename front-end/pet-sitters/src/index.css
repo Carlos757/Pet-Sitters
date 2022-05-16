@@ -15,6 +15,23 @@ body {
     padding: 10px 0;
     margin: 10px auto;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+.cuidador-detalle-item {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    flex-direction: column;
+}
+.animales-detalle-item {
+    padding: 10px 0;
+    margin: 10px auto;
+    flex-direction: column;
+}
+.cuidador-item:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
 }
 .cuidador-item-text {
     display: flex;
@@ -30,6 +47,19 @@ body {
     }
     .cuidador-item {
         width: 100%;
+        padding: 10px 0;
+        margin: 10px auto;
+        flex-direction: row;
+    }
+    .cuidador-detalle-item {
+        width: 100%;
+        padding: 10px 0;
+        margin: 10px auto;
+        flex-direction: row;
+    }
+}
+@media (min-width: 700px) {
+    .animales-detalle-item {
         padding: 10px 0;
         margin: 10px auto;
         flex-direction: row;

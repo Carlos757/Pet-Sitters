@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Cuidadores from "./components/Cuidadores";
+import MostrarCuidador from "./components/MostrarCuidador";
 
 const url = "https://60cdf0b491cc8e00178dc287.mockapi.io/";
 
@@ -23,6 +24,10 @@ function App() {
                     <Route
                         path="/cuidadores"
                         element={<Cuidadores url={url} />}
+                    />
+                    <Route
+                        path="/cuidadores/mostrar/:id"
+                        element={<MostrarCuidador />}
                     />
                 </Routes>
             </Container>
