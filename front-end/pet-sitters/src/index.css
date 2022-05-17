@@ -2,6 +2,50 @@ body {
     background-color: #eeeeee;
 }
 
+.banner {
+    position: relative;
+    text-align: center;
+    /* height: 32rem; */
+    color: white;
+    display: block;
+}
+.banner-img {
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    top: -0.5rem;
+    left: -2rem;
+
+    width: calc(100% + 5rem);
+    height: 100%;
+
+    filter: drop-shadow(0 5px 7px #00000074);
+    border-radius: 5px;
+}
+.content-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 30rem;
+    filter: drop-shadow(0 2px 5px #00000074);
+    border-radius: 5px;
+    padding: 1rem 0;
+}
+.banner-box {
+    position: absolute;
+    bottom: 0.7rem;
+    left: -2rem;
+    background-color: #57575771;
+    width: calc(100% + 5rem);
+    padding: 0.5rem 0;
+    border-end-end-radius: 5px;
+    border-end-start-radius: 5px;
+}
+.banner-text {
+    font-size: 0.8rem;
+    font-family: "Roboto", sans-serif;
+}
+
 .login {
     width: 100%;
 }
@@ -39,8 +83,38 @@ body {
     justify-content: center;
     align-items: center;
 }
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+    color: transparent;
+}
 
 @media (min-width: 600px) {
+    .banner-img {
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 32rem;
+    }
+    .content-img {
+        object-position: center;
+        width: 85%;
+        max-height: 30rem;
+    }
+    .banner-box {
+        bottom: 0;
+        left: 0;
+        background-color: #57575771;
+        width: 100%;
+        padding: 0.5rem 0;
+        margin-bottom: 0.25rem;
+    }
+    .banner-text {
+        font-size: 1rem;
+    }
     .form {
         width: 80%;
         margin: 0 auto;

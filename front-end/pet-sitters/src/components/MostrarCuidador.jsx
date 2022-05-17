@@ -13,14 +13,19 @@ import {
     Fab,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import AgendarDias from "./AgendarDias.jsx";
 
 const MostrarCuidador = () => {
     const [cuidador, setCuidador] = useState({ rating: 5 });
     const [modal, setModal] = useState(false);
     const location = useLocation();
 
-    const handleAgendarClick = () => {
+    const handleOpenModalAgendar = () => {
         setModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setModal(false);
     };
 
     useEffect(() => {
@@ -218,15 +223,23 @@ const MostrarCuidador = () => {
                             />
                         </ListItem>
                     ))}
+
+                {/* Modal */}
                 <Fab
                     variant="extended"
                     color="primary"
-                    sx={{ position: "absolute", bottom: 32, right: 32 }}
-                    onClick={handleAgendarClick}
+                    sx={{ position: "fixed", bottom: 32, right: 32 }}
+                    onClick={handleOpenModalAgendar}
                 >
                     <AddIcon />
-                    Agendar Dias
+                    Agendar Días
                 </Fab>
+                <AgendarDias
+                    modal={modal}
+                    setModal={setModal}
+                    handleCloseModal={handleCloseModal}
+                    cuidador={cuidador}
+                />
             </Card>
         </div>
     );
