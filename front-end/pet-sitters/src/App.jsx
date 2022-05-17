@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Container } from "@mui/material";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import Login from "./components/Login";
 import Cuidadores from "./components/Cuidadores";
-import MostrarCuidador from "./components/MostrarCuidador";
-import Footer from "./components/Footer";
+import MostrarCuidador from "./components/cuidadores/MostrarCuidador";
+import Footer from "./components/layout/Footer";
 
 const url = "https://60cdf0b491cc8e00178dc287.mockapi.io/";
 

@@ -53,7 +53,7 @@ const LoginForm = ({ url, emailRegExp, passwordRegExp, validaCampo }) => {
                 },
             });
             const data = await response.json();
-            console.log(data);
+            /* console.log(data); */
             if (data.id) {
                 navigate("/inicio");
             }

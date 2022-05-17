@@ -91,7 +91,7 @@ const RegisterForm = ({
                 },
             });
             const data = await response.json();
-            console.log(data);
+            /* console.log(data); */
             if (data.id) {
                 navigate("/inicio");
             }

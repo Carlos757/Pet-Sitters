@@ -35,9 +35,6 @@ const Cuidadores = ({ url }) => {
         }
     }
 
-    const handleCuidadorClick = (cuidador) => {
-        console.log(cuidador);
-    };
     return (
         <Paper className="cuidador-list">
             <Typography align="center" variant="h4" sx={{ p: 3 }}>
@@ -55,7 +52,6 @@ const Cuidadores = ({ url }) => {
                             component={Link}
                             to={"mostrar/" + cuidador.id}
                             state={{ cuidador: cuidador }}
-                            onClick={() => handleCuidadorClick(cuidador)}
                         >
                             <ListItemAvatar>
                                 <Avatar

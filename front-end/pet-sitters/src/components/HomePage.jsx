@@ -19,10 +19,10 @@ const HomePage = () => {
                 <Paper sx={{ mt: 2, p: 4 }} elevation={3}>
                     <Container align="center">
                         <Typography sx={{ m: 2 }} variant="h4">
-                            ¿Qué es Peet Sitters?
+                            ¿Qué es Pet Sitters?
                         </Typography>
                         <Typography variant="body1">
-                            Peet Sitters es una plataforma que te permite
+                            Pet Sitters es una plataforma que te permite
                             encontrar un cuidador de mascotas para tu mascota en
                             la ciudad de tu preferencia.
                         </Typography>
@@ -34,7 +34,7 @@ const HomePage = () => {
                             ¿Cómo funciona?
                         </Typography>
                         <Typography variant="body1">
-                            En Peet Sitters, encontrarás una lista de cuidadores
+                            En Pet Sitters, encontrarás una lista de cuidadores
                             que están disponibles para tu mascota.
                         </Typography>
                         <Typography variant="body1">
@@ -59,10 +59,10 @@ const HomePage = () => {
                 <Paper sx={{ mt: 2, p: 4 }} elevation={3}>
                     <Container align="center">
                         <Typography sx={{ m: 2 }} variant="h4">
-                            ¿Qué servicios ofrece Peet Sitters?
+                            ¿Qué servicios ofrece Pet Sitters?
                         </Typography>
                         <Typography variant="body1">
-                            Peet Sitters ofrece servicios de limpieza,
+                            Pet Sitters ofrece servicios de limpieza,
                             desparasitación, baño y cepillado de mascotas.
                         </Typography>
                         <div>

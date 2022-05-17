@@ -47,7 +47,7 @@ const Navbar = () => {
                         </IconButton>
 
                         <Typography sx={{ flexGrow: 1 }} variant="h6">
-                            Peet Sitters
+                            Pet Sitters
                         </Typography>
 
                         <Button

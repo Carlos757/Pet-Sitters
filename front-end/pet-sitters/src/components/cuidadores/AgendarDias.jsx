@@ -16,7 +16,7 @@ import {
     Alert,
     Snackbar,
 } from "@mui/material";
-import Toast from "./utilities/Toast";
+import Toast from "../utilities/Toast";
 
 const AgendarDias = ({ modal, handleCloseModal, cuidador }) => {
     const [cita, setCita] = useState({
