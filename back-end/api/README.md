@@ -21,5 +21,5 @@ Estructura del body utilizado en metodos POST, PUT:
 -   Obtiene un Pet Sitter por ID: `GET /api/pet-sitters/:id`
 -   Actualiza un Pet Sitter: `PUT /api/pet-sitters/:id`
 
--   Elimina un Pet Sitter : `DELETE /api/accounts/:id/`
+-   Elimina un Pet Sitter : `DELETE /api/pet-sitters/:id/`
 -   Obtiene todos Pet Sitters filtrados por State : `GET /api/pet-sitters/state/:id`
