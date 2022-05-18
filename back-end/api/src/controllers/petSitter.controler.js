@@ -5,7 +5,10 @@ import {
     crearPetSitter,
     actualizarPetSitter,
     eliminarPetSitter,
-    consultaPetSittersPorState
+    consultaPetSittersPorState,
+    agregarPetsTypeAPetSitter,
+    consultaPetsTypeDePetSitter,
+    eliminarPetsTypeDePetSitter,
 } from "./../database/queries/petSitterQueries"
 
 const getPetSitters = async (req, res) => {
@@ -87,16 +90,46 @@ const deletePetSitter = async (req, res) => {
     }
 };
 
-/* function checkUndefined(petSitter) {
-    let valores = Object.values(petSitter);
-    let hasUndefined = false;
-    valores.forEach(atributo => {
-        if (atributo === undefined) {
-            hasUndefined = true;
-        }
-    });
-    return hasUndefined;
-} */
+const addPetsTypeToPetSitter = async (req, res) => {
+    try {
+        const { idPetSitter: petSitterId } = req.params;
+        const { id: petsTypeId } = req.body;
+        const obj = { petSitterId, petsTypeId };
+        const connection = await getConnection();
+        const result = await connection.query(agregarPetsTypeAPetSitter, obj);
+        console.log(result);
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message)
+    }
+};
+const getAllPetsTypeFromPetSitter = async (req, res) => {
+    try {
+        const { idPetSitter } = req.params;
+        const connection = await getConnection();
+        const result = await connection.query(consultaPetsTypeDePetSitter, idPetSitter);
+        res.json(result);
+    } catch (error) {
+        console.log(error);
+        res.status(500);
+        res.send(error.message)
+    }
+};
+
+const deletePetsTypeFromPetSitter = async (req, res) => {
+    try {
+        const { idPetSitter: petSitterId, idPetsType: petsTypeId } = req.params;
+        console.log(petSitterId, petsTypeId);
+        const connection = await getConnection();
+        const result = await connection.query(eliminarPetsTypeDePetSitter, [petSitterId, petsTypeId]);
+        console.log(result);
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message)
+    }
+};
 
 export const methods = {
     getPetSitters,
@@ -105,4 +138,7 @@ export const methods = {
     updatePetSitter,
     deletePetSitter,
     getPetSittersFilteredState,
+    addPetsTypeToPetSitter,
+    deletePetsTypeFromPetSitter,
+    getAllPetsTypeFromPetSitter,
 };

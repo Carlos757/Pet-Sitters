@@ -3,7 +3,6 @@ import morgan from "morgan";
 /* Rutas */
 import petSitterRoutes from "./routes/petSitter.routes";
 
-
 const app = express();
 
 /* Configuración */

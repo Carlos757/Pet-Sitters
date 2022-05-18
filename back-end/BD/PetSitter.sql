@@ -56,24 +56,24 @@ insert into PetSitter (name, lastName, email, cellphone, cityId, photoURL ) valu
 -- drop database petsitter;
  
  -- permita agregar información en tabla “PetSitter
- insert into PetSitter (name, lastName, email, cellphone, cityId, photoURL ) values 
- ("Carlos","Ríos","carlos123df@gmail.com","6674347527",1,"url");
+ -- insert into PetSitter (name, lastName, email, cellphone, cityId, photoURL ) values 
+ -- ("Carlos","Ríos","carlos123df@gmail.com","6674347527",1,"url");
  
 --  permita editar información de un registro de “PetSitter”
-update PetSitter set 
-name = "Ignacio", 
-lastName = "Madrid",
-email = "",
-cellPhone = "",
-cityId = 2,
-photoURL = ""
-where id = 1;
+-- update PetSitter set 
+-- name = "Ignacio", 
+-- lastName = "Madrid",
+-- email = "",
+-- cellPhone = "",
+-- cityId = 2,
+-- photoURL = ""
+-- where id = 1;
  
 --  permita eliminar un registro de “PetSitter”
-delete from PetSitter where id = 2;
+-- delete from PetSitter where id = 2;
  
 --  obtenga listado de todos los registros de “PetSitter”
-select * from PetSitter;
+-- select * from PetSitter;
  
 --  obtenga registros de “PetSitter ” filtrado por “State”
 select p.*, c.nombre as cityName, s.id as stateId, s.nombre as stateName
@@ -85,7 +85,6 @@ where s.id = 1;
 
 -- Resolución de problemas
 -- Desarrollar modelo en BD para que un registro de “PetSitter” se le puedan agregar “PetsType”
--- drop table PetSitter_PetsType
 create table PetSitter_PetsType(
     id INT PRIMARY KEY AUTO_INCREMENT,
 	petSitterId INT NOT NULL,
@@ -98,8 +97,8 @@ ALTER TABLE PetSitter_PetsType
 	ADD unique index i_petSitterId_petsTypeId (petSitterId, petsTypeId);
 
 -- permita agregar “PetsType” a un “PetSitter”
- insert into PetSitter_PetsType (petSitterId, petsTypeId) values 
- (1,1),(1,2),(4,2),(4,1);
+-- insert into PetSitter_PetsType (petSitterId, petsTypeId) values 
+-- (1,1),(1,2),(4,2),(4,1);
  
 -- permita obtener todos los “PetsType” que tiene asignado un “PetSitter”
 select pt.*, pp.id as petSitter_petsType_id
@@ -109,8 +108,8 @@ inner  join PetSitter ps on pp.petSitterId = ps.id
 where ps.id = 1;
 
 -- permita quitar un “PetsType” a un “PetSitter” (2 posibles opciones)
-delete from PetSitter_PetsType where id = 2;
-delete from PetSitter_PetsType where petSitterId = 1 and petsTypeId = 1 ;
+-- delete from PetSitter_PetsType where id = 2;
+-- delete from PetSitter_PetsType where petSitterId = 1 and petsTypeId = 1 ;
 
 
 
