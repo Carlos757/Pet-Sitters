@@ -1,6 +1,6 @@
 # Configuración
 
-Para poder correr la api es nesesario primero haber creado la base de datos con el script que se encuentra en este mismo repo, luego crear un archivo .env en la raiz de la carpeta "api" con algo similar a la siguiente configuracion:
+Para poder correr la api es necesario primero haber creado la base de datos con el script que se encuentra en este mismo repo, luego crear un archivo .env en la raíz de la carpeta "api" con algo similar a la siguiente configuración:
 
 ```
 HOST = localhost
@@ -9,7 +9,7 @@ USER = root
 PASSWORD = ''
 ```
 
-Una ver realizado lo anterior, se puede correr la api con los siguientes comandos:
+Una vez realizado lo anterior, se puede correr la api con los siguientes comandos:
 
 ```
 npm install
